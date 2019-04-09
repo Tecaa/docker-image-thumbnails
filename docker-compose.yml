@@ -6,11 +6,11 @@ services:
     ports:
      - "4001:4001"
     volumes:
-      - "./generator/output:/code/output"
+      - "/output:/output"
   thumbnails-server:
-    image: "redis:alpine"
+    build: ./server
     volumes:
-      - "./server/output:/code/output"
+      - "/output:/output"
     container_name: thumbnails-server
     ports:
      - "4000:4000"

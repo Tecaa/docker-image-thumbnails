@@ -4,13 +4,13 @@ services:
     build: ./generator
     container_name: thumbnails-generator
     ports:
-     - "8080:8080"
+     - "4001:4001"
     volumes:
       - "./generator/output:/code/output"
-  #thumbnails-server:
-    #image: "redis:alpine"
-    #volumes:
-      #- "./server/output:/code/output"
-    #container_name: thumbnails-server
-    #ports:
-#     - "4000:4000"
+  thumbnails-server:
+    image: "redis:alpine"
+    volumes:
+      - "./server/output:/code/output"
+    container_name: thumbnails-server
+    ports:
+     - "4000:4000"

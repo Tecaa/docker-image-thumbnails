@@ -1,0 +1,10 @@
+version: '3'
+services:
+  thumbnails-generator:
+    build: ./generator
+    container_name: thumbnails-generator
+  #thumbnails-server:
+    #image: "redis:alpine"
+    #container_name: thumbnails-server
+    #ports:
+#     - "4000:4000"

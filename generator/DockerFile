@@ -6,3 +6,4 @@ RUN echo 'export PATH=$PATH:/usr/local/lib/node_modules/hls-live-thumbnails/src/
 RUN /bin/bash -c "source /etc/profile"
 
 CMD hls-live-thumbnails --secret "super-secret" --endless --initialThumbnailCount 1 --width 300 --interval 10 --port 4001
+EXPOSE 4001

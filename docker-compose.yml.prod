@@ -1,0 +1,16 @@
+version: '3'
+services:
+  thumbnails-generator:
+    image: marojaso/thumbnails-generator
+    container_name: thumbnails-generator
+    ports:
+     - "4001:4001"
+    volumes:
+      - "/output:/output"
+  thumbnails-server:
+    image: marojaso/thumbnails-server
+    volumes:
+      - "/output:/output"
+    container_name: thumbnails-server
+    ports:
+     - "80:4000"

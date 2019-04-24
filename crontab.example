@@ -1,2 +1,2 @@
-0 4   *   *   *    /sbin/shutdown -r +5
+0 8   *   *   *    /sbin/shutdown -r +5
 @reboot  ~/startup.sh

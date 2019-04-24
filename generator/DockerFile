@@ -5,5 +5,5 @@ RUN npm install -g https://github.com/Tecaa/hls-live-thumbnails
 RUN echo 'export PATH=$PATH:/usr/local/lib/node_modules/hls-live-thumbnails/src/' >> /etc/profile
 RUN /bin/bash -c "source /etc/profile"
 
-CMD hls-live-thumbnails --secret "super-secret" --endless --initialThumbnailCount 1 --width 1024 --interval 10 --port 4001
+CMD hls-live-thumbnails --secret "super-secret" --endless --initialThumbnailCount 1 --width 1024 --interval 10 --port 4001 --proxy http://164.77.124.195:50854
 EXPOSE 4001
